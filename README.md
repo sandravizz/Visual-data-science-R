@@ -4,6 +4,8 @@
 
 - ### Introduction 
 
+In this chapter I introduce the concept of ggplot, regarding code you are asked to install the necessary libraries: [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Installations)
+
 - ### Distributions 
 
 - ### Relationships 
