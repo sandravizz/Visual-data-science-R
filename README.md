@@ -2,15 +2,15 @@
 
 [Presentation](https://slides.com/sandraviz/rggplot2/embed?style=light)
 
-- ## Introduction 
+- ### Introduction 
 
-- ## Distributions 
+- ### Distributions 
 
-- ## Relationships 
+- ### Relationships 
 
-- ## Time series 
+- ### Time series 
 
-- ## Advanced visualisations 
+- ### Advanced visualisations 
 
-- ## Markdown 
+- ### Markdown 
 
