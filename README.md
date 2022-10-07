@@ -2,17 +2,20 @@
 
 [Presentation](https://slides.com/sandraviz/rggplot2/embed?style=light)
 
-- ### Introduction 
+### Introduction 
 
-In this chapter I introduce the concept of ggplot, regarding code you are asked to install the necessary libraries: [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Installations)
+In this chapter I introduce the concept of ggplot, regarding [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Installations)
+you are asked to install the necessary libraries. 
 
-- ### Distributions 
+### Distributions 
 
-- ### Relationships 
+In this chapter we look on different visualisation type to show the distribution of variables. In the  [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Distributions) you find the logical flow. 
 
-- ### Time series 
+### Relationships 
 
-- ### Advanced visualisations 
+### Time series 
 
-- ### Markdown 
+### Advanced visualisations 
+
+### Markdown 
 
