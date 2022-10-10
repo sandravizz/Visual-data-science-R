@@ -1,8 +1,6 @@
 # Visual data science
 
-Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new *data science* project. 
-
-[Presentation](https://slides.com/sandraviz/rggplot2/embed?style=light)
+Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new *data science* project. Please find the corresponding [Presentation](https://slides.com/sandraviz/rggplot2/embed?style=light).
 
 ### Introduction 
 
