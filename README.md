@@ -4,8 +4,7 @@ Explorative data visualisation is a very important part when analyising the stru
 
 ### Introduction 
 
-In this chapter I introduce the concept of the R visualisation package *ggplot*, regarding [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Installations)
-you are asked to install the necessary libraries. 
+In this chapter I introduce the concept of the R visualisation package *ggplot*, regarding the installation pleae see the [code](https://github.com/sandravizz/Visual-data-science-R/blob/main/R-%20Installations). Afterwards it is the next step to define a *theme* please find the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Themes.R) 
 
 ### Distributions 
 
