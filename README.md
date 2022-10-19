@@ -43,5 +43,5 @@ Chart types covered
 
 ### Markdown 
 
-The markdown option is a good way to save the whole project including comments and summaries. [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Markdown.R)
+The markdown option is a good way to save the whole project including comments and summaries. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Markdown.R)
 
