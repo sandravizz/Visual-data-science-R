@@ -1,10 +1,10 @@
 # Visual data science
 
-Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new *data science* project. Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
+Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new data science project. Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
 
 ### Introduction 
 
-In this chapter I introduce the concept of the R visualisation package *ggplot*, regarding the installation please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R). Afterwards it is the next step to define a *theme* please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Themes.R) 
+In this chapter I introduce the concept of the R visualisation package ggplot, regarding the installation please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R). Afterwards it is the next step to define a theme please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Themes.R) 
 
 ### Distributions 
 
