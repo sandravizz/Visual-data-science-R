@@ -8,7 +8,7 @@ In this chapter I introduce the concept of the R visualisation package ggplot, r
 
 ### Distributions 
 
-In this chapter we look at different visualisation type to show distribution of variables. In the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Distributions.R) you find the logical flow. 
+In this chapter we look at different visualisation types showing the distribution of one variables. Please chech the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Distributions.R)
 
 Chart types covered
 
@@ -19,7 +19,7 @@ Chart types covered
 
 ### Relationships 
 
-In this chapter we look at different visualisation type to show relationships between 2 variables. In the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Explorative%20analysis.R) you find the logical flow. 
+In this chapter we look at different visualisation types presenting the relationships between two variables. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Explorative%20analysis.R) 
 
 Chart types covered
 
@@ -29,11 +29,11 @@ Chart types covered
 
 ### Time series 
 
-Time series data have a very specific structure. Generally we want to check different variables by the time variable, which makes the space of possible visualisation types smaller. It is a good start to look at the overall evolution and then zoom in to specific categories which can be outliers discovered beforehand. Please check the corresponding [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Time%20series.R) 
+Time series data have a very specific structure. Generally the goal is to understand over time patterns (trends) which are often present as line charts. The focus of this chapter is the visual analytical flow when investigating patterns over time. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Time%20series.R) 
 
 ### Advanced visualisations 
 
-In this chapter I present three more advanced chart type as their strucutre is less commonly used and/or cover higer visual complexity. Pleased check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Advanced%20visualisations.R) 
+In this chapter I present three more advanced visualisation types as their strucutre is less commonly used and/or cover higer visual complexity. Pleased check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Advanced%20visualisations.R) 
 
 Chart types covered
 
