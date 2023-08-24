@@ -7,7 +7,7 @@ head(economics, n=10)
 str(economics)
 summary(economics)
 
-#1 General plot definition and theme saved in a variable
+#General plot definition and theme saved in a variable
 e <-ggplot(economics, aes(date, unemploy))
 
 #Showing the different geoms for time data 
@@ -16,7 +16,7 @@ e + geom_bar(stat = "identity") + ggtitle("bar")
 e + geom_area() + ggtitle("area")
 e + geom_line() + ggtitle("line") 
 
-#2 Showing trends for different categories 
+#Showing trends for different categories 
 
 #Check the data 
 names(economics_long)
@@ -39,7 +39,7 @@ ggplot(economics_long, aes(date, value01, colour = variable)) +
   facet_wrap(~variable, ncol=4) +
   geom_hline(yintercept = 0.5) + geom_smooth(color = trend_color)
 
-#3 If we want to see the exact movements how the y values changes 
+#If we want to see the exact movements how the y values changes 
 
 #Check the data 
 names(economics)
@@ -66,7 +66,7 @@ head(Oxboys, n=10)
 str(Oxboys)
 summary(Oxboys)
 
-# A single line tries to connect all the observations 
+#A single line tries to connect all the observations 
 h<- ggplot(Oxboys, aes(age, height)) 
 h + geom_line() 
 
@@ -74,37 +74,37 @@ h + geom_line()
 h1 <- ggplot(Oxboys, aes(age, height, group=Subject))
 h1 + geom_line()
 
-# Create a small multiple for the variable subject to understand the logic 
+#Creating a small multiple for the variable subject to understand the logic 
 h1 + geom_line() + 
   facet_wrap(~Subject, ncol=2) 
 
 #Introducing the smooth element 
 
-# Using the group aesthetic with both geom_line() and geom_smooth()
-# groups the data the same way for both layers
+#Using the group aesthetic with both geom_line() and geom_smooth()
+#groups the data the same way for both layers
 h1 + geom_line() + 
      geom_smooth(aes(), colour = trend_color, size = 0.5, method = "lm", se = FALSE)
 
-# Changing the group aesthetic for the smoother layer
-# fits a single line of best fit across all boys
+#Changing the group aesthetic for the smoother layer
+#fits a single line of best fit across all boys
 h1 + geom_line() +
      geom_smooth(aes(group = 1), colour = trend_color, size = 3, method = "lm", se = TRUE)
 
-# Adding a confidence intervall
+#Adding a confidence intervall
 h1 + geom_line() +
   geom_smooth(aes(group = 1), colour = trend_color, size = 0.5, method = "lm", se = TRUE)
 
-# Now we combine a box-plot with the line chart 
+#Now we combine a box-plot with the line chart 
 h2 <- ggplot(Oxboys, aes(Occasion, height))
 h2 + geom_boxplot() + geom_line(colour = "blue")
 
-# We can add the a line chart again for all the subjects  
+#We can add the a line chart again for all the subjects  
 h2 + geom_boxplot() + geom_line(aes(group = Subject, colour = "blue"), size=0.3)
 
-# We can add the a line chart grouped 
+#We can add the a line chart grouped 
 h2 + geom_boxplot() + geom_smooth(aes(group = 1), method = "lm", se = FALSE)
 
-# Creating a visual analytical story 
+#Creating a visual analytical story 
 names(gapminder)
 head(gapminder, n=10)
 str(gapminder)
@@ -127,12 +127,12 @@ ggplot() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Life expectancy by continent")
 
-# Zooming in to see only europe 
+#Zooming in to see only europe 
 ggplot(subset(gapminder, continent ==  "Europe")) +
   geom_line(aes(year, lifeExp, group = country), color= line_color, show.legend = FALSE) +
   labs(title = "Life expectancy in Europe - detecting an outlier") 
 
-# Select only Europe in order to understand which country is the outlier
+#Select only Europe in order to understand which country is the outlier
 europe <- dplyr::filter(gapminder, continent == "Europe")
 
 ggplot(europe, aes(year, lifeExp)) +
@@ -195,7 +195,6 @@ ggplot() +
   geom_line(data=gapminder, aes (year, lifeExp, group = country), lwd = 0.3, show.legend = FALSE, color = line_color) +
   labs(title = "Total vs. all countries") 
 
-##Extra 
 # Select only Europe: second way
 ggplot(subset(gapminder, continent ==  "Europe")) +
   geom_line(aes(year, lifeExp, group = country, size= pop, color=pop, alpha = pop), show.legend = FALSE) + 

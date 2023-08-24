@@ -20,7 +20,7 @@ ggplot(diamonds, aes(factor(cut),price)) +
   theme(axis.title=element_blank()) +
   annotate("text", x = 25, y = 20, adj=1,  family="serif", label = c(""))
 
-#With the diamond dataset
+#With the gapminder dataset
 ggplot(gapminder, aes(factor(continent),lifeExp)) + 
   geom_tufteboxplot(outlier.colour="transparent", size=2, color= "#f206d3") + 
   theme(axis.title=element_blank()) 
@@ -54,7 +54,7 @@ ppp <- ggplot(gapminder, aes(lifeExp, gdpPercap)) +
 
 ggMarginal(ppp, type = "density", fill="#f206d3", alpha=1, color='transparent')
 
-#Box-plot  
+#Boxplot  
 pp <- ggplot(diamonds, aes(carat, price)) + 
   geom_point(size=0.02, alpha=0.09, color="blue") + 
   theme(axis.title=element_blank(), axis.text=element_blank())

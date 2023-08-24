@@ -1,43 +1,36 @@
 #Datasets 
 
-# Adults - how to connect to exteranl data 
-adults <- read.csv("https://gist.githubusercontent.com/sandravizmad/8273490c96bf54a345cd119fb458bc04/raw/4234e3d287a4d24f16331a663b3dacc04ab67620/Adults")
-names(adults)
-head(adults, n=10)
-str(adults)
-summary(adults)
-
-# Storms - https://dplyr.tidyverse.org/reference/storms.html
+#Storms - https://dplyr.tidyverse.org/reference/storms.html
 names(storms)
 head(storms, n=10)
 str(storms)
 summary(storms)
 
-# Life expectancy
+#Life expectancy
 names(gapminder)
 head(gapminder, n=10)
 str(gapminder)
 summary(gapminder)
 
-# Txhousing 
+#Txhousing 
 names(txhousing)
 head(txhousing, n=10)
 str(txhousing)
 summary(txhousing)
 
-#05 Orange
+#Orange
 names(Orange)
 head(Orange, n=10)
 str(Orange)
 summary(Orange)
 
-#06 Flights 
+#Flights 
 names(flights)
 head(flights, n=10)
 str(flights)
 summary(flights)
 
-# Diamonds 
+#Diamonds 
 names(diamonds)
 head(diamonds, n=10)
 str(diamonds)
@@ -46,25 +39,25 @@ summary(diamonds)
 #How to create subsamples
 diamonds_sample <- diamonds[sample(nrow(diamonds), 1000),]
 
-# Mpg 
+#Mpg 
 names(mpg)
 head(mpg, n=10)
 str(mpg)
 summary(mpg)
 
-# Economics 
+#Economics 
 names(economics)
 head(economics, n=10)
 str(economics)
 summary(economics)
 
-# Economics 2
+#Economics 2
 names(economics_long)
 head(economics_long, n=10)
 str(economics_long)
 summary(economics_long)
 
-# Car
+#Car
 names(mtcars)
 head(mtcars, n=10)
 str(mtcars)
@@ -91,6 +84,7 @@ NCAAround<-aggregate(. ~Round, data=NCAA, mean, na.rm=TRUE)
 #Difference between scores
 NCAAavg$diff.score<-NCAAavg$Winning.Score-NCAAavg$Losing.Score
 NCAAround$diff.score<-NCAAround$Winning.Score-NCAAround$Losing.Score
+
 #Mean between scores
 NCAAavg$mean.score<-mean(NCAAavg$Winning.Score,NCAAavg$Losing.Score,
                          trim = 0, na.rm = FALSE)

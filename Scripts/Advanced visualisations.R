@@ -15,8 +15,7 @@ ggparcoord(iris, columns = 1:4, alphaLines = 0.3)
 #Simple chart, adding a color code 
 ggparcoord(iris, columns = 1:4, groupColumn = 5, alphaLines = 0.3) + 
   scale_color_manual(values=c("#478adb", "#f20675", "#1ce3cd"))
-
-#Simple chart, adding a color code 
+ 
 ggparcoord(iris, columns = 1:4, groupColumn = 5, alphaLines = 0.3, boxplot = TRUE) + 
   scale_color_manual(values=c("#478adb", "#f20675", "#1ce3cd"))
 
@@ -45,7 +44,7 @@ ggparcoord(iris, columns = 1:4, groupColumn = 5, order = "anyClass",
            showPoints = TRUE, alphaLines = 0.3, scale="center")+ 
   scale_color_manual(values=c("#478adb", "#f20675", "#1ce3cd"))
 
-# use sample of the diamonds data for illustrative purposes
+#Sample of the diamonds dataset for illustrative purposes
 diamonds.samp <- diamonds[sample(1:dim(diamonds)[1], 400),]
 
 #Check the data 
@@ -54,24 +53,24 @@ head(diamonds.samp, n=10)
 str(diamonds.samp)
 summary(diamonds.samp)
 
-# basic parallel coordinate plot, using default settings
+#Basic parallel coordinate plot, using default settings
 ggparcoord(diamonds.samp, columns = c(1, 5:7), alphaLines = 0.3)
 
 #Adding color
 ggparcoord(diamonds.samp, columns = c(1, 5:7), groupColumn = 2,  alphaLines = 0.3)+ 
   scale_color_manual(values=c("#478adb", "#bcc048", "#f20675", "#cccccc", "#1ce3cd"))
 
-## Use splines on values, rather than lines (all produce the same result)
+#Use splines on values, rather than lines (all produce the same result)
 ggparcoord(diamonds.samp, columns = c(1, 5:7), groupColumn = 2, alphaLines = 0.3)+ 
   scale_color_manual(values=c("#478adb", "#bcc048", "#f20675", "#cccccc", "#1ce3cd"))  +   
   facet_wrap(. ~ cut, ncol=2)
 
-## Changing the method
+#Changing the method
 ggparcoord(diamonds.samp, columns = c(1, 5:7), groupColumn = 2, alphaLines = 0.3, scale = "uniminmax")+ 
   scale_color_manual(values=c("#478adb", "#bcc048", "#f20675", "#cccccc", "#1ce3cd"))  +   
   facet_wrap(. ~ cut, ncol=2) 
 
-## Use splines on values, rather than lines (all produce the same result)
+#Use splines on values, rather than lines (all produce the same result)
 ggparcoord(diamonds.samp, columns = c(1, 5:7), groupColumn = 2, alphaLines = 0.5, splineFactor = TRUE)+ 
   scale_color_manual(values=c("#478adb", "#cccccc", "#f20675", "#bcc048", "#1ce3cd"))  +   
   facet_wrap(. ~ cut, ncol=2)
@@ -195,19 +194,18 @@ ggplot(europe5, aes(country, x = y1952, xend = y2007)) +
 #and finally apply everything to the dataset storm 
 
 #Waffle chart 
-
 ?waffle
 
 #Create a random data set 
 d <- c(50, 30, 20, 10)
 
-#1. Basic waffle 
+#Basic waffle 
 waffle(d, rows = 20, colors = c("#478adb", "#f20675", "#bcc048", "#1ce3cd"))
 
-#2. Change size 
+#Change size 
 waffle(d, rows = 5, colors = c("#478adb", "#f20675", "#bcc048", "#1ce3cd"), size = 0.1) 
 
-#4. Change the position of the legend
+#Change the position of the legend
 waffle(d/2 , rows = 5, colors = c("#478adb", "#f20675", "#bcc048", "#1ce3cd"), size = 0.1, legend_pos = "bottom")
 
 #New simple dataset created 
@@ -231,8 +229,7 @@ iron(
   waffle(c(thing1 = 25, thing2 = 75), colors = c(main1_color, main2_color), rows = 5, keep = FALSE, legend_pos = "bottom")
 )
 
-#5. Adding the legend only to one 
-
+#Adding the legend only to one 
 iron(
   
   waffle(

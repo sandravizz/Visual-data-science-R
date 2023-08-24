@@ -96,14 +96,14 @@ d + scale_colour_brewer("Diamond\nclarity")
 d + scale_colour_brewer(palette = "Greens")
 d + scale_colour_brewer(palette = "Set1")
 
-# scale_fill_brewer works just the same as
-# scale_color_brewer but for fill colors
+#scale_fill_brewer works just the same as
+#scale_color_brewer but for fill colors
 p <- ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram(position = "dodge", binwidth = 1000)
 
 p + scale_fill_brewer()
 
-# the order of color can be reversed
+#the order of color can be reversed
 p + scale_fill_brewer(direction = -1)
 
 #Creating some random numbers
@@ -120,16 +120,16 @@ head(df, n=10)
 str(df)
 summary(df)
 
-# Default colour scale colours from light blue to dark blue
+#Default colour scale colours from light blue to dark blue
 ggplot(df, aes(x, y)) +
   geom_point(aes(colour = z2))
 
-# For diverging colour scales use gradient2
+#For diverging colour scales use gradient2
 ggplot(df, aes(x, y)) +
   geom_point(aes(colour = z1), size=5) +
   scale_colour_gradient2()
 
-# Adjust colour choices with low and high
+#Adjust colour choices with low and high
 ggplot(df, aes(x, y)) +
   geom_point(aes(colour = z2), size=5) +
   scale_colour_gradient(low = "red", high = "blue")
@@ -152,7 +152,7 @@ head(mpg, n=10)
 str(mpg)
 summary(mpg)
 
-# Scale size 
+#Scale size 
 p <- ggplot(mpg, aes(displ, hwy, size = hwy)) +
   geom_point()
 plot(p)
@@ -160,19 +160,19 @@ plot(p)
 p + scale_size("Highway mpg")
 p + scale_size(range = c(0, 10))
 
-# If you want zero value to have zero size, use scale_size_area:
+#If you want zero value to have zero size, use scale_size_area:
 p + scale_size_area()
 
-# If you want to map size to radius (usually bad idea), use scale_radius
+#If you want to map size to radius (usually bad idea), use scale_radius
 p + scale_radius()
 
 #Axis
 
-# Flip the X and Y axis 
+#Flip the X and Y axis 
 p + coord_flip()
 
-# Reverse the X and Y Axis 
+#Reverse the X and Y Axis 
 p + scale_x_reverse() + scale_y_reverse()
 
-# Zoom in by defining the limits of the axis 
+#Zoom in by defining the limits of the axis 
 p + coord_cartesian(xlim=c(0,5), ylim=c(0, 20)) 
