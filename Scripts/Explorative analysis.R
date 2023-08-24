@@ -316,15 +316,12 @@ pp <- ggplot(diamonds, aes(carat, price)) +
 ggMarginal(pp, type = "density", fill=main2_color, alpha=1, color='transparent')
 
 #Box-plot  
-
 ggMarginal(pp, type = "boxplot", size=30, fill=main2_color)
 
 #Histogram  
-
 ggMarginal(pp, type = "histogram", size=20, fill=main2_color, colour=NA)
 
 #Using the iris data set 
-
 piris <- ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
   geom_point()
 
