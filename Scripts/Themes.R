@@ -3,7 +3,7 @@
 #Checking the theme options
 ?theme
 
-#We can set a theme as the default, for example 
+#We can set a theme as default, for example 
 theme_set(theme_bw())
 
 #Simple chart
@@ -37,7 +37,7 @@ sandra_theme<-theme_bw() + theme(
   legend.title = element_blank() 
 )
 
-#Now we set the new defined theme to the default option 
+#Now we set the new defined theme to default 
 theme_set(sandra_theme)
 
 #Simple chart

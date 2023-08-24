@@ -1,29 +1,27 @@
-#Explorative Analysis (gapminder dataset)
+#Creating a visual analytic story 
 
-# Creating a visual analytic story 
+#Checking the dataset
 names(gapminder)
 head(gapminder, n=10)
 str(gapminder)
 summary(gapminder)
 
-#Make sure you've set your preferred theme as a default
+#Make sure you've set your preferred theme as default
 
 #One dimensional distributions
 
 #Frequency Polygon
-
-#Checking the options
 ?geom_freqpoly
 
 #Simple chart
 ggplot(gapminder, aes(lifeExp)) + 
   geom_freqpoly(colour = main2_color) 
 
-#Changing the bin width (more details)
+#Changing the bin width (zoom in)
 ggplot(gapminder, aes(lifeExp)) + 
   geom_freqpoly(colour = main2_color, binwidth = 0.8)
 
-#Changing the bin width (less details)
+#Changing the bin width (zoom out)
 ggplot(gapminder, aes(lifeExp)) + 
   geom_freqpoly(colour = main2_color, binwidth = 10) 
 
@@ -39,15 +37,13 @@ ggplot(gapminder, aes(lifeExp, colour = continent)) +
   xlim(60, 80)
 
 #Histogram
-
-#Checking the options
 ?geom_histogram
 
-#Simple chart, the same with a histogram 
+#Simple chart
 ggplot(gapminder, aes(lifeExp)) + 
   geom_histogram(colour = "black", fill = main2_color, binwidth = 10) 
 
-#How to zoom by defining the limits for the x axis 
+#Zooming by defining the limits for the x axis 
 ggplot(gapminder, aes(lifeExp)) + 
   geom_histogram(colour = "black", fill = main2_color) + 
   xlim(60, 80)
@@ -62,7 +58,7 @@ ggplot(gapminder, aes(lifeExp, fill = continent)) +
   geom_histogram(position = "dodge", binwidth = 10) + 
   scale_fill_manual(values=c("#478adb", "#f20675", "#1ce3cd", "#bcc048", "#cccccc"))
 
-#The whole idea of the grammar of graphs 
+#The whole idea of Grammar of Graphs: overlaying graphics
 ggplot(gapminder, aes(lifeExp, color = continent)) +
   geom_histogram(colour=decoration_color, fill = decoration_color, alpha = 0.2, size =0) +
   geom_freqpoly()+ 
@@ -84,7 +80,7 @@ ggplot(gapminder, aes(lifeExp, color = continent)) +
   geom_histogram(colour=decoration_color, fill=decoration_color, alpha=0.2, size=0) +
   geom_freqpoly() 
 
-#Color set - color brewer
+#Another color set
 ggplot(gapminder, aes(lifeExp, color = continent)) +   
   scale_colour_brewer(palette = "Set1") +
   geom_histogram(colour=decoration_color, fill=decoration_color, alpha = 0.07, size =0) +
@@ -97,20 +93,18 @@ ggplot(gapminder, aes(lifeExp, color = continent)) +
   scale_colour_manual(values=c("#478adb", "#1ce3cd", "#f206d3", "#bcc048", "#cccccc"))  + 
   xlim(60, 80)
 
-#Multiple: histogram for the different continents to facilitate comparison: first the simple version
+#Multiple: histogram for the different continents to facilitate comparison
 ggplot(gapminder, aes(lifeExp)) + 
   geom_histogram(binwidth = 2, fill = main2_color, colour = "black") + 
   facet_wrap(. ~ continent)
 
-#Changing the colors
+#Changing colors
 ggplot(gapminder, aes(lifeExp, fill = continent)) + 
   geom_histogram(binwidth = 2, colour = "black") + 
   scale_fill_manual(values=c("#478adb", "#cccccc", "#f20675", "#bcc048", "#1ce3cd")) +
   facet_wrap(. ~ continent)
 
 #Boxplot
-
-#Checking the options
 ?geom_boxplot
 
 # Simple boxplot by category 
@@ -138,17 +132,15 @@ ggplot(gapminder, aes(lifeExp, gdpPercap)) +
                outlier.shape = 19, 
                outlier.color=decoration_color)
 
-#Tufe boxplot
+#Tufte boxplot
 ggplot(gapminder, aes(factor(continent),lifeExp)) + 
   geom_tufteboxplot(outlier.colour="transparent", size=1, color=main2_color) 
 
-#Tufe boxplot
+#Tufte boxplot
 ggplot(gapminder, aes(factor(lifeExp),gdpPercap)) + 
   geom_tufteboxplot(aes(group = cut_width(lifeExp, 5)), color=main2_color) 
 
 #Desnsity chart
-
-#Checking the options
 ?geom_density
 
 #Simple chart - the same with a density chart
@@ -160,19 +152,17 @@ ggplot(gapminder, aes(lifeExp, group = continent, fill = continent)) +
   geom_density(adjust = 1.5 , color = NA) + 
   scale_fill_manual(values=c("#478adb", "#cccccc", "#f20675", "#bcc048", "#1ce3cd"))   
 
-#Multiple density chart, with using one color and transparency we can identify easly the overlap as a more dense part through all cuts 
+#Multiple density chart, with using one color 
 ggplot(gapminder, aes(lifeExp, group=continent, fill=continent)) +
   geom_density(adjust=1.5 , color= NA, fill=main2_color, alpha =0.1) 
 
-#Small multiple density for carat by the different cuts 
+#Small multiple density chart
 ggplot(gapminder, aes(lifeExp, stat(density), fill=continent)) + 
   geom_density(color = NA) +
   scale_fill_manual(values=c("#478adb", "#cccccc", "#f20675", "#bcc048", "#1ce3cd")) +   
   facet_wrap(. ~ continent) 
 
 #Ridgeline plot
-
-#Checking the options
 ?geom_density_ridges
 
 #Another way of creating small multiples is using the ridgeline plot 
@@ -189,17 +179,17 @@ ggplot(gapminder, aes(x = lifeExp, y = continent, fill=continent)) +
   geom_density_ridges(color=NA, scale = 8) +
   scale_fill_manual(values=c("#478adb", "#cccccc", "#f20675", "#bcc048", "#1ce3cd"))
 
-#Using color to represent x twice (viridis scale)
+#Using color to represent x twice
 ggplot(gapminder, aes(x = lifeExp, y = continent, fill = stat(x))) +
   geom_density_ridges_gradient(color="black", scale = 2, size = 0.3) +
   scale_fill_viridis_c() 
 
-#Using color (self defined) to represent x twice (own created scale)
+#Using color (self defined) to represent x twice 
 ggplot(gapminder, aes(x = lifeExp, y = continent, fill = stat(x))) +
   geom_density_ridges_gradient(color="black", scale = 2, size = 0.3) +
   scale_fill_gradient(low=main2_color, high=main1_color)
 
-#Check on the data 
+#New dataset
 names(lincoln_weather)
 head(lincoln_weather, n=10)
 str(lincoln_weather)
@@ -231,7 +221,6 @@ ggplot(gapminder, aes(x = lifeExp, y = continent)) +
   geom_density_ridges(scale=1, fill=NA, color=main2_color, jittered_points=TRUE , 
                       point_alpha=1, point_size=1, size=0.8) 
 
-#Adding the actual points  
 ggplot(gapminder, aes(x = lifeExp, y = continent)) +
   geom_density_ridges(scale=0.5, fill=NA, color=main2_color, jittered_points=TRUE , 
                       point_alpha=1, point_size=1, size=0.8, position="raincloud") 
@@ -246,8 +235,6 @@ ggplot(gapminder, aes(x = lifeExp, y = continent, fill=continent, color=continen
 #Relationship analysis 
 
 #Scatter plot 
-
-#Checking the options
 ?geom_point
 
 #Basic scatter plot 
@@ -262,7 +249,7 @@ ggplot(gapminder, aes(x=lifeExp, y=gdpPercap)) +
 ggplot(gapminder, aes(x=lifeExp, y=gdpPercap)) +  
   geom_point(alpha=0.3, color=main2_color)
 
-#Basic scatter plot changing the Y limits
+#Basic scatter plot - changing the Y limits
 ggplot(gapminder, aes(x=lifeExp, y=gdpPercap)) + 
   geom_point(size=0.5, color=main2_color) + 
   ylim(0, 16000)
@@ -375,8 +362,6 @@ ggplot(gapminder, aes(x=lifeExp, y=continent, colour=continent)) +
   scale_colour_manual(values=c("#cccccc", "#478adb", "#f20675", "#1ce3cd", "#bcc048"))
 
 #Hexagonal binning
-
-#Checking the options
 ?geom_hex
 
 #Aggregation through hexagonal binning - defining the number of bins 
@@ -391,7 +376,7 @@ ggplot(gapminder, aes(x=lifeExp, y=gdpPercap)) +
   scale_y_log10(breaks = round(as.vector(quantile(gapminder$gdpPercap)), digits = 1))+
   scale_fill_gradient(low=main2_color, high=main1_color) 
 
-#Checking the options
+#Heatmap
 ?geom_bin2d
 
 #Heatmap based on rectangles
@@ -404,7 +389,7 @@ ggplot(gapminder, aes(x=lifeExp, y=gdpPercap)) +
   geom_bin2d(bins = 50, alpha = 0.4)+
   scale_fill_gradient(low=main2_color, high=main1_color) 
 
-#Checking the options
+#Density estimation
 ?stat_density_2d
 
 #Density estimation with contours

@@ -11,8 +11,6 @@ summary(diamonds)
 #One dimensional distributions
 
 #Frequency Polygon
-
-#Checking the options
 ?geom_freqpoly
 
 #Simple:carat - play around with binwidth 
@@ -35,8 +33,6 @@ ggplot(diamonds, aes(price, colour = cut)) +
   xlim(0, 5000)
 
 #Histogram
-
-#Checking the options
 ?geom_histogram
 
 #Simple:carat - the same with a histogram 
@@ -71,7 +67,6 @@ ggplot(diamonds, aes(price, colour = cut)) +
   geom_histogram(colour=decoration_color, fill=decoration_color, alpha=0.2, size=0) +
   geom_freqpoly() 
 
-#Color set - colour brewer
 ggplot(diamonds, aes(price, colour = cut)) +  
   scale_colour_brewer(palette = "Set1") +
   geom_histogram(colour=decoration_color, fill=decoration_color, alpha = 0.07, size =0) +
@@ -96,8 +91,6 @@ ggplot(diamonds, aes(price, fill = cut)) +
   facet_wrap(. ~ cut)
 
 #Boxplot
-
-#Checking the options
 ?geom_boxplot
 
 # Simple boxplot by category 
@@ -131,8 +124,6 @@ ggplot(diamonds, aes(carat, price)) +
                outlier.color=decoration_color)
 
 #Desnsity chart
-
-#Checking the options
 ?geom_density
 
 #Simple:carat - the same with a density chart
@@ -155,8 +146,6 @@ ggplot(diamonds, aes(price, stat(density), fill=cut)) +
   facet_wrap(. ~ cut) 
 
 #Ridgeline plot
-
-#Checking the options
 ?geom_density_ridges
 
 #Another way of creating small multiples is using the ridgeline plot 
@@ -178,7 +167,7 @@ ggplot(diamonds, aes(x = price, y = cut, fill = stat(x))) +
   geom_density_ridges_gradient(color="black", scale = 2, size = 0.3) +
   scale_fill_viridis_c() 
 
-#Using colour (self defined) to represent x twice (own created scale)
+#Using colour (self defined) to represent x twice
 ggplot(diamonds, aes(x = price, y = cut, fill = stat(x))) +
   geom_density_ridges_gradient(color="black", scale = 2, size = 0.3) +
   scale_fill_gradient(low=main2_color, high=main1_color)
@@ -226,8 +215,6 @@ ggplot(iris, aes(x = Sepal.Length, y = Species, fill = stat(x))) +
 #Relationship analysis 
 
 #Scatter plot 
-
-#Checking the options
 ?geom_point
 
 #Basic scatter plot 
@@ -316,7 +303,6 @@ ggplot(diamonds, aes(carat, price)) +
   ylab("")
 
 #Marginal plot to compare all simple distributions with the scatter plot relationship representation 
-
 ?ggMarginal
 
 #Now we set the new defined theme to the default option 
@@ -345,7 +331,6 @@ piris <- ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 ggMarginal(piris, groupColour = TRUE, groupFill = TRUE)
 
 #Beeswarm 
-
 ?geom_jitter()
 
 #Simple jitter plot
@@ -378,8 +363,6 @@ ggplot(diamonds, aes(y=cut, x=price, colour=cut)) +
   scale_colour_manual(values=c("#cccccc", "#478adb", "#f20675", "#1ce3cd", "#bcc048"))
 
 #Hexagonal binning
-
-#Checking the options
 ?geom_hex
 
 #Aggregation through hexagonal binning - defining the number of bins 
@@ -395,7 +378,7 @@ ggplot(diamonds, aes(x=carat, y=price))  +
   scale_y_log10(breaks = round(as.vector(quantile(diamonds$price)), digits = 1))+
   scale_fill_gradient(low=main2_color, high=main1_color) 
 
-#Checking the options
+#Heatmap
 ?geom_bin2d
 
 #Heatmap based on rectangles
