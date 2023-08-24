@@ -1,8 +1,5 @@
 #Checking the version 
-
 getRversion()
-
-#Packages and libraries
 
 #Install packages
 if(!'ggplot2'%in%installed.packages()){
