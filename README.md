@@ -1,14 +1,16 @@
 # Visual data science
 
-Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new data science project. Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
+Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new data science project. 
+
+Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
 
 ### Introduction 
 
-In this chapter I introduce the concept of the R visualisation package ggplot, regarding the installation please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R). Afterwards it is the next step to define a theme please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Themes.R) 
+In this chapter I introduce the concept of the R visualisation package ggplot. Regarding the installation please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R). Afterwards it is the next step to define a theme, please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Themes.R).
 
 ### Distributions 
 
-In this chapter we look at different visualisation types showing the distribution of one variables. Please chech the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Distributions.R)
+In this chapter we look at different visualisation types showing the distribution of one variables. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Distributions.R).
 
 Chart types covered
 
@@ -19,21 +21,22 @@ Chart types covered
 
 ### Relationships 
 
-In this chapter we look at different visualisation types presenting the relationships between two variables. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Explorative%20analysis.R) 
+In this chapter we look at different visualisation types presenting the relationships between two variables. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Explorative%20analysis.R).
 
 Chart types covered
 
 - Scatter plot 
 - Beeswarm plot 
 - Hexagonal binning
+- Heatmap
 
 ### Time series 
 
-Time series data have a very specific structure. Generally the goal is to understand over time patterns (trends) which are often present as line charts. The focus of this chapter is the visual analytical flow when investigating patterns over time. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Time%20series.R) 
+Time series data have a very specific structure. The goal is to understand over time patterns (trends) which are often presented as line charts. The focus of this chapter is on the visual analytical flow when investigating patterns over time. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Time%20series.R).
 
 ### Advanced visualisations 
 
-In this chapter I present three more advanced visualisation types as their strucutre is less commonly used and/or cover higer visual complexity. Pleased check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Advanced%20visualisations.R) 
+In this chapter I present three more advanced visualisation types as their strucutre is less commonly used and/or cover higer visual complexity. Pleased check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Advanced%20visualisations.R).
 
 Chart types covered
 
@@ -43,5 +46,5 @@ Chart types covered
 
 ### Markdown 
 
-The markdown option is a good way to save the whole project including comments and summaries. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Markdown.R)
+The markdown option is a good way to save the whole project including comments and summaries. Please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Markdown.R).
 
