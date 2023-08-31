@@ -4,6 +4,10 @@ Explorative data visualisation is a very important part when analyising the stru
 
 Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
 
+### Setup 
+
+In case this is your first time using R you need to install your own copy as well as RStudio, a software application that makes R easier to use. Both R and RStudio are free and easy to download. R is maintained by an international team of developers who make the language available through this [web page](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R) The top of the web page provides three links for downloading R. Under this [link](https://posit.co/products/open-source/rstudio/) you can download Rstudio 
+
 ### Introduction 
 
 In this chapter I introduce the concept of the R visualisation package ggplot. Regarding the installation please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R). Afterwards it is the next step to define a theme, please check the [code](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Themes.R).
