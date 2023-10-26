@@ -8,7 +8,7 @@ Please check the corresponding [presentation](https://slides.com/sandraviz/rggpl
 
 ### Setup 
 
-In case this is your first time using R you need to install your own copy as well as RStudio, a software application that makes R easier to use. Both R and RStudio are free and easy to download. R is maintained by an international team of developers who make the language available through this [web page](https://github.com/sandravizz/visual-data-science-R/blob/main/Scripts/Installations.R) The top of the web page provides three links for downloading R. Under this [link](https://posit.co/products/open-source/rstudio/) you can download Rstudio 
+In case this is your first time using R you need to install your own copy as well as RStudio, a software application that makes R easier to use. Both R and RStudio are free and easy to download. R is maintained by an international team of developers. The top of the web page provides three links for downloading R. Under this [link](https://posit.co/products/open-source/rstudio/) you can download Rstudio 
 
 ### Introduction 
 
