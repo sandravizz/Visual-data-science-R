@@ -1,6 +1,9 @@
 # Visual data science
 
 ![Alt text](Images/Title.png)
+![Alt text](Images/R2.jpeg)
+![Alt text](Images/R3.jpeg)
+![Alt text](Images/R4.jpeg)
 
 Explorative data visualisation is a very important part when analyising the structure in our data. It should always be one of the first steps when starting a new data science project. 
 
