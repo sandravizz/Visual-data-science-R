@@ -1,6 +1,6 @@
 # Visual data science
 
-Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light) as well as corresponding [video tutorials](https://youtube.com/playlist?list=PL53pYdoYDFiv2PFCiuXR53PZj9bZrZpyp)
+Please check the corresponding [presentation](https://slides.com/sandraviz/rggplot2/embed?style=light). 
 
 ![Alt text](Images/R1.png)
 
